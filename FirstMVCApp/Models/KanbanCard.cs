@@ -23,6 +23,10 @@ namespace FirstMVCApp.Models
 
         public string CardCheckList { get; set; }
 
+        public DateTime DeadlineDate { get; set; }
+
+        public float ProgressPercentage { get; set; }
+
         public Guid? KanbanColumnId { get; set; }
 
         public virtual KanbanColumn KanbanColumn { get; set; }
