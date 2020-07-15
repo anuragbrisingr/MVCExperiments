@@ -26,5 +26,12 @@ namespace FirstMVCApp.Controllers
 
             return View();
         }
+
+        public ActionResult Kanban()
+        {
+            ViewBag.Message = "Kanban Board.";
+
+            return View();
+        }
     }
 }
