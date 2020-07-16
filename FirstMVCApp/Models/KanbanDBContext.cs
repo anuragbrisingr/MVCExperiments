@@ -14,6 +14,7 @@ namespace FirstMVCApp.Models
 
         public virtual DbSet<KanbanCard> KanbanCards { get; set; }
         public virtual DbSet<KanbanColumn> KanbanColumns { get; set; }
+        public virtual DbSet<KanbanBoard> KanbanBoards { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -26,6 +27,11 @@ namespace FirstMVCApp.Models
                 .HasMany(e => e.KanbanCards)
                 .WithOptional(e => e.KanbanColumn)
                 .HasForeignKey(e => e.KanbanColumnId);
+
+            modelBuilder.Entity<KanbanColumn>()
+                .HasRequired<KanbanBoard>(e => e.KanbanBoard)
+                .WithMany(f => f.KanbanColumns)
+                .HasForeignKey(e => e.KanbanBoardId);
         }
     }
 }

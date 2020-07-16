@@ -187,9 +187,14 @@
     <Compile Include="Migrations\202007150436039_AddedProgressPercentage.Designer.cs">
       <DependentUpon>202007150436039_AddedProgressPercentage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007160602553_AddedKanbanBoardAndOneToManyWithColumn.cs" />
+    <Compile Include="Migrations\202007160602553_AddedKanbanBoardAndOneToManyWithColumn.Designer.cs">
+      <DependentUpon>202007160602553_AddedKanbanBoardAndOneToManyWithColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\KanbanBoard.cs" />
     <Compile Include="Models\KanbanCard.cs" />
     <Compile Include="Models\KanbanColumn.cs" />
     <Compile Include="Models\KanbanDBContext.cs" />
@@ -280,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007150436039_AddedProgressPercentage.resx">
       <DependentUpon>202007150436039_AddedProgressPercentage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007160602553_AddedKanbanBoardAndOneToManyWithColumn.resx">
+      <DependentUpon>202007160602553_AddedKanbanBoardAndOneToManyWithColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -23,9 +23,13 @@ namespace FirstMVCApp.Models
 
         public Guid? KanbanCardId { get; set; }
 
+        public Guid KanbanBoardId { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KanbanCard> KanbanCards { get; set; }
 
         public virtual KanbanCard KanbanCard { get; set; }
+
+        public virtual KanbanBoard KanbanBoard { get; set; }
     }
 }
