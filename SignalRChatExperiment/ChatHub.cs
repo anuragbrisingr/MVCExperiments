@@ -6,6 +6,7 @@ namespace SignalRChatExperiment
     {
         public void Send(string name, string message)
         {
+            // Call to the client method.
             Clients.All.addNewMessageToPage(name, message);
         }
     }

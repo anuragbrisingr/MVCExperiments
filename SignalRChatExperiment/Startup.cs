@@ -4,11 +4,11 @@ using Owin;
 [assembly: OwinStartup(typeof(SignalRChatExperiment.Startup))]
 namespace SignalRChatExperiment
 {
-    public partial class Startup
+    public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            // Any Hub/Conection wire up & configuration should go in here.
+            // Any Hub/Conection wire up & configuration should be written here.
             app.MapSignalR();
         }
     }
